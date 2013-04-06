@@ -72,8 +72,8 @@ function setConnVal (v1, v2) {
 
             <div class="controls">
                 <h4>测试数据</h4>
-                <blockquote><code id="connUrlEg1">mysql://localhost:3306/tbc?user=root&password=yuanyuan</code><br />
-                    <code id="connUrlEg2">mysql://localhost:3306/tbc2?user=root&password=yuanyuan</code><br />
+                <blockquote><code id="connUrlEg1">mysql://localhost:3306/test?user=root&password=***</code><br />
+                    <code id="connUrlEg2">mysql://localhost:3306/test1?user=root&password=***</code><br />
                     <a class="btn btn-small" href="javascript:setConnVal(E$('connUrlEg1').innerHTML, E$('connUrlEg2').innerHTML)">使用示例数据</a>
                 </blockquote>
             </div>

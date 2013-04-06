@@ -113,6 +113,13 @@
 			<version>${jetty.version}</version>
 			<scope>test</scope>
 		</dependency>
+
+        <dependency>
+        	<groupId>org.mortbay.jetty</groupId>
+        	<artifactId>jetty</artifactId>
+        	<version>${jetty.version}</version>
+        </dependency>
+
 		
 		<!-- sitemesh -->
 		<dependency>

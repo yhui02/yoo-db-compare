@@ -32,22 +32,18 @@
 	<constant name="struts.ui.theme" value="xhtml" />
 
     <package name="yooApp" namespace="/" extends="struts-default">
-        <default-action-ref name="default" />
+        <default-action-ref name="index" />
 		
         <action name="index" class="com.yoo.IndexAction">
             <result name="input">/template/index.jsp</result>
             <result name="success">/template/index.jsp</result>
             <result name="dbmanager">/template/dbmanager.jsp</result>
         </action>
+    </package>
 
+    <package name="JSON" namespace="/" extends="json-default">
         <action name="modify" class="com.yoo.JSONDbModifyAction">
             <result type="json" />
         </action>
-		
-		<!-- 默认 -->
-		<action name="default">
-			<result>/template/404.jsp</result>
-		</action>
     </package>
-
 </struts>
