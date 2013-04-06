@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>yoo</groupId>
-	<artifactId>dbcompare</artifactId>
+	<artifactId>yoo-db-compare</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>yoo-dbcompare</name>
+	<name>yoo-db-compare</name>
 
 	<properties>
 		<struts2.version>2.2.3.1</struts2.version>

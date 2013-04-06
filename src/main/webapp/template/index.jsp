@@ -53,28 +53,28 @@ function setConnVal (v1, v2) {
         <div class="control-group">
             <label class="control-label" for="connUrl1">DATABASE1</label>
             <div class="controls">
-                <input type="text" id="connUrl1" name="connUrl1" placeholder="DATABASE1" class="span6" value="${param.connUrl1}">
+                <input type="text" id="connUrl1" name="connUrl1" placeholder="mysql://host:port/database?user=***&password=***" class="span6" value="${param.connUrl1}">
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="connUrl2">DATABASE2</label>
             <div class="controls">
-                <input type="text" id="connUrl2" name="connUrl2" placeholder="DATABASE2" class="span6" value="${param.connUrl2}">
+                <input type="text" id="connUrl2" name="connUrl2" placeholder="mysql://host:port/database?user=***&password=***" class="span6" value="${param.connUrl2}">
             </div>
         </div>
         <div class="control-group">
             <div class="controls">
-                <button type="submit" class="btn btn-primary">开始比较</button>
-                <button type="reset" class="btn">重置</button>
+                <input type="submit" class="btn btn-primary" value="Start compare" />
+                <input type="reset" class="btn" value="Reset" />
             </div>
         </div>
         <div class="control-group">
 
             <div class="controls">
-                <h4>测试数据</h4>
+                <h4>demo data</h4>
                 <blockquote><code id="connUrlEg1">mysql://localhost:3306/test?user=root&password=***</code><br />
                     <code id="connUrlEg2">mysql://localhost:3306/test1?user=root&password=***</code><br />
-                    <a class="btn btn-small" href="javascript:setConnVal(E$('connUrlEg1').innerHTML, E$('connUrlEg2').innerHTML)">使用示例数据</a>
+                    <a class="btn btn-small" href="javascript:setConnVal(E$('connUrlEg1').innerHTML, E$('connUrlEg2').innerHTML)">use demo data</a>
                 </blockquote>
             </div>
         </div>

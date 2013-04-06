@@ -12,9 +12,9 @@ String baseUrl = request.getContextPath() + "/";
 <head>
 <meta charset="utf-8">
 <base href="<%=baseUrl%>" />
-<title><decorator:title default="Yoo DB Manager" /></title>
-<meta http-equiv="keywords" content="Yoo DB Manager" />
-<meta http-equiv="description" content="Yoo DB Manager" />
+<title><decorator:title default="YOO DB Compare" /></title>
+<meta http-equiv="keywords" content="YOO DB Compare" />
+<meta http-equiv="description" content="YOO DB Compare" />
 <meta name="title" content="<decorator:title /> "/>
 <meta name="author" content="Yohann" />
 
@@ -27,7 +27,7 @@ String baseUrl = request.getContextPath() + "/";
 <body>
 <div class="container-narrow">
   <div class="masthead">
-    <h3><a href="index">Yoo DB Manager</a></h3>
+    <h3><a href="index">YOO DB Compare</a></h3>
   </div>
 
   <hr>
