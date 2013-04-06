@@ -1,0 +1,169 @@
+/*
+ * @Yohann
+ */
+body {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color:#333;
+}
+
+/* Custom container */
+.container-narrow {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    margin: 60px 0;
+}
+
+.jumbotron h1 {
+    font-size: 72px;
+    line-height: 1;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 60px 0;
+}
+
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+.jumbotron .controls blockquote{line-height: 172%;}
+
+
+
+/*
+ * tinybox
+ */
+.tbox {
+    position: absolute;
+    display: none;
+    padding: 14px 17px;
+    z-index: 900
+}
+
+.tinner {
+    padding: 15px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #fff url(../image/tiny/preload.gif) no-repeat 50% 50%;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    overflow: auto
+}
+
+.tmask {
+    position: absolute;
+    display: none;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    z-index: 800
+}
+
+.tclose {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(../image/tiny/close.png) no-repeat
+}
+
+.tclose:hover {
+    background-position: 0 -30px
+}
+
+#error {
+    background: #ff6969;
+    color: #fff;
+    text-shadow: 1px 1px #cf5454;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 0;
+}
+
+#error .tcontent {
+    padding: 10px 14px 11px;
+    border: 1px solid #ffb8b8;
+    -moz-border-radius: 2px;
+    border-radius: 2px
+}
+
+#success {
+    background: #2ea125;
+    color: #fff;
+    text-shadow: 1px 1px #1b6116;
+    padding: 10;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    filter: alpha(opacity = 76);
+    -moz-opacity: 0.76;
+    opacity: 0.76;
+    -moz-border-radius: 3px 0 3px;
+    border-radius: 0 0 3px 3px
+}
+
+#bluemask {
+    background: #000000
+}
+
+#frameless {
+    padding: 0
+}
+
+/*#frameless .tclose {left:6px}*/
+
+/*
+ * eTitle
+ */
+.eTitle {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 100;
+    visibility: hidden
+}
+
+.eTitle1 {
+    font: normal 12px/16px;
+    white-space: nowrap;
+    color: #444;
+    padding: 2px 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background: #FFFFD9;
+    border: 1px solid #555
+}
+
+.eTitle2 {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #333;
+    filter: alpha(opacity = 50);
+    opacity: 0.5;
+    z-index: 9
+}
+
+.eTitle3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    filter: alpha(opacity = 0);
+    opacity: 0
+}

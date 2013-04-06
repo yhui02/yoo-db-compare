@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<package name="dbmanager" namespace="/dbmanager" extends="struts-default">
+		<action name="index" class="com.yoo.IndexAction">
+			<result name="input">/template/index.jsp</result>
+			<result name="success">/template/index.jsp</result>
+			<result name="dbmanager">/template/dbmanager.jsp</result>
+		</action>
+		
+		<action name="modify" class="com.yoo.JSONDbModifyAction">
+			<result type="json" />
+		</action>
+	</package>
+
+</struts>

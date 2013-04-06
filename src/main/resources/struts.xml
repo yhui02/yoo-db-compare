@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 动态方法调用支持 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+
+	<!-- 开发模式下打印更详细的错误信息 -->
+	<constant name="struts.devMode" value="true" />
+
+	<!-- 设置浏览器是否缓存静态内容，默认值为true（生产环境下使用），开发阶段最好关闭  -->
+	<constant name="struts.serve.static.browserCache" value="false" />
+
+	<!-- 当struts的配置文件修改后，系统是否自动重新加载该文件，默认值为false（生产环境下使用），开发阶段最好打开 -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+	
+	<!-- 国际化文件实时加载 -->
+	<constant name="struts.custom.i18n.reload" value="false"></constant>
+
+	<!-- 指定STRUTS2支持后缀 -->
+	<constant name="struts.action.extension" value=",action,do,htm,json,xml"></constant>
+	
+	<!-- 指定国际化文件 -->
+	<!--<constant name="struts.custom.i18n.resources" value=",mess,zelipe,global"></constant>-->
+	
+	<!-- 指定字符编码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<!-- 默认的视图主题  simple,xhtml,css_xhtml -->
+	<constant name="struts.ui.theme" value="xhtml" />
+
+    <package name="yooApp" namespace="/" extends="struts-default">
+        <default-action-ref name="default" />
+		
+        <action name="index" class="com.yoo.IndexAction">
+            <result name="input">/template/index.jsp</result>
+            <result name="success">/template/index.jsp</result>
+            <result name="dbmanager">/template/dbmanager.jsp</result>
+        </action>
+
+        <action name="modify" class="com.yoo.JSONDbModifyAction">
+            <result type="json" />
+        </action>
+		
+		<!-- 默认 -->
+		<action name="default">
+			<result>/template/404.jsp</result>
+		</action>
+    </package>
+
+</struts>
