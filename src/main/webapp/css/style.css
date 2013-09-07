@@ -1,21 +1,68 @@
 /*
  * @Yohann
  */
-body {
-    padding-top: 20px;
-    padding-bottom: 40px;
-    color:#333;
+.container {
+    max-width: 820px;
+}
+.page-header{padding-top: 1em;margin-top: 0;}
+.page-header .navbar-brand{font-size:32px;}
+.footer {
+    padding-top: 10px;
+    margin-top: 3.2em;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+    min-height: 42px;
 }
 
-/* Custom container */
-.container-narrow {
-    margin: 0 auto;
-    max-width: 700px;
+.row{margin:0 9em;}
+
+.bs-example {
+    position: relative;
+    padding: 16px;
+    margin: 6px 0 0;
+    background-color: #fafafa;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+    border-color: #e5e5e5 #eee #eee;
+    border-style: solid;
+    border-width: 1px 0;
+    background-color: #fff;
+    border-width: 1px;
+    border-color: #ddd;
+    border-radius: 4px 4px 0 0;
+    box-shadow: none;
+}
+.highlight {
+    margin-bottom: 14px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
 }
 
-.container-narrow > hr {
-    margin: 30px 0;
+.bs-example + .highlight {
+    margin-top: -16px;
+    margin-left: 0;
+    margin-right: 0;
+    border-width: 1px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-radius: 0;
+    border-width: 0 0 1px;
+    padding: 22px 16px 10px 16px;
+    margin-bottom: 14px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 0 0 4px 4px;
 }
+.highlight pre {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 0;
+    white-space: nowrap;
+}
+.text-error{color:red;}
+
 
 /* Main marketing message and sign up button */
 .jumbotron {

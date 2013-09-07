@@ -12,34 +12,34 @@ String baseUrl = request.getContextPath() + "/";
 <head>
 <meta charset="utf-8">
 <base href="<%=baseUrl%>" />
-<title><decorator:title default="YOO DB Compare" /></title>
+<title><decorator:title default="Yoo DB Compare" /></title>
 <meta http-equiv="keywords" content="YOO DB Compare" />
 <meta http-equiv="description" content="YOO DB Compare" />
 <meta name="title" content="<decorator:title /> "/>
 <meta name="author" content="Yohann" />
 
-<link rel="stylesheet" href="css/bootstrap.css?v1">
+<link rel="stylesheet" href="http://lib.sinaapp.com/js/bootstrap/3.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css?v1">
 <script src="js/core.js"></script>
 <decorator:head />
 </head>
 
 <body>
-<div class="container-narrow">
-  <div class="masthead">
-    <h3><a href="index">YOO DB Compare</a></h3>
-  </div>
+    <div class="navbar">
+        <div class="container page-header">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index"><i class="glyphicon glyphicon-fire"></i>Yoo DB Compare</a>
+            </div>
+        </div>
+    </div>
 
-  <hr>
+    <div class="container">
+        <decorator:body/>
+    </div>
 
-  <decorator:body />
-
-  <hr>
-
-  <div class="footer">
-    <p>&copy; <script>document.write(new Date().getFullYear())</script> | by Yohann</p>
-  </div>
-</div> <!-- /container -->
-
+    <div class="footer container">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> | @Yohann</p>
+    </div>
+<!-- /container -->
 </body>
 </html>

@@ -2,11 +2,6 @@
 
 <html>
 <head>
-<style type="text/css">
-.ct_box{width:80%;margin:0 auto}
-.ct_box .z_box{line-height:32px;}
-.z_box label{width:82px;text-align:right;display:inline-block;}
-</style>
 
 <script>
 function checkForm(obj){
@@ -37,49 +32,40 @@ function setConnVal (v1, v2) {
 </head>
 
 <body>
-<div class="jumbotron">
-    <form class="form-horizontal" action="index!dbmanager" method="get" onsubmit="return checkForm(this)">
+    <div class="row">
         <p class="controls text-error">${errorMsg}</p>
 
-        <div class="control-group">
-            <label class="control-label" for="connUrl1">DATABASE TYPE</label>
-            <div class="controls">
-                <select>
+        <form class="bs-example" role="form" action="index!dbmanager" method="post" onsubmit="return checkForm(this)">
+            <div class="form-group">
+                <label class="control-label" for="connUrl1">DATABASE TYPE</label>
+                <select class="form-control">
                     <option value="mysql">mysql</option>
                 </select>
             </div>
-        </div>
 
-        <div class="control-group">
-            <label class="control-label" for="connUrl1">DATABASE1</label>
-            <div class="controls">
-                <input type="text" id="connUrl1" name="connUrl1" placeholder="mysql://host:port/database?user=***&password=***" class="span6" value="${param.connUrl1}">
+            <div class="form-group input-group">
+                <span class="input-group-addon">db 1</span>
+                <input type="text" id="connUrl1" name="connUrl1" class="form-control" placeholder="mysql://host:port/database?user=***&password=***" value="${param.connUrl1}">
             </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="connUrl2">DATABASE2</label>
-            <div class="controls">
-                <input type="text" id="connUrl2" name="connUrl2" placeholder="mysql://host:port/database?user=***&password=***" class="span6" value="${param.connUrl2}">
+            <div class="form-group input-group">
+                <span class="input-group-addon">db 2</span>
+                <input type="text" id="connUrl2" name="connUrl2" class="form-control" placeholder="mysql://host:port/database?user=***&password=***" value="${param.connUrl2}">
             </div>
-        </div>
-        <div class="control-group">
-            <div class="controls">
+            <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Start compare" />
-                <input type="reset" class="btn" value="Reset" />
+                <input type="reset" class="btn btn-default" value="Reset" />
             </div>
-        </div>
-        <div class="control-group">
+        </form>
 
-            <div class="controls">
-                <h4>demo data</h4>
-                <blockquote><code id="connUrlEg1">mysql://localhost:3306/test?user=root&password=***</code><br />
-                    <code id="connUrlEg2">mysql://localhost:3306/test1?user=root&password=***</code><br />
-                    <a class="btn btn-small" href="javascript:setConnVal(E$('connUrlEg1').innerHTML, E$('connUrlEg2').innerHTML)">use demo data</a>
-                </blockquote>
-            </div>
-        </div>
-    </form>
-</div>
+        <div class="form-group highlight">
+            <h4>demo data</h4>
+            <pre>
+                <code id="connUrlEg1">mysql://localhost:3306/test?user=root&password=***</code><br />
+                <code id="connUrlEg2">mysql://localhost:3306/test1?user=root&password=***</code><br />
+            </pre>
 
+            <a class="btn btn-default" href="javascript:setConnVal(E$('connUrlEg1').innerHTML, E$('connUrlEg2').innerHTML)">Use demo data</a>
+        </div>
+    </div>
 </body>
 </html>

@@ -7,7 +7,8 @@
 <script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
 <script type="text/javascript" src="js/jquery_plus.js"></script>
 <style>
-.container-narrow{width:98%;max-width: 98%}
+.container{width:98%;max-width: 98%}
+#main{font-size:12px;}
 #main .main{vertical-align: top;}
 .main{padding:12px;}
 .diff *{color:red !important;}
@@ -34,9 +35,9 @@ function aj_execute(type, url, formName){
 				jq('#whole').load(location.href + ' #whole');
 				jq('#'+formName).remove();
 				jq('#li_'+formName).addClass('del');
-				ELN.box.show({html:'执行成功！系统已刷新数据。',animate:false,close:false,mask:false,boxid:'success',autohide:3,top:-14});
+				YOO.box.show({html:'执行成功！系统已刷新数据。',animate:false,close:false,mask:false,boxid:'success',autohide:3,top:-14});
 			}else{
-				ELN.box.show({html:'执行失败！可能已存在同名字段，但字段类型不一致。<br />请手动执行，并刷新本页面。',animate:false,close:false,boxid:'error',top:10});
+				YOO.box.show({html:'执行失败！可能已存在同名字段，但字段类型不一致。<br />请手动执行，并刷新本页面。',animate:false,close:false,boxid:'error',top:10});
 			}
 		}
 	});
@@ -45,7 +46,7 @@ function aj_execute(type, url, formName){
 </head>
 
 <body>
-<table id="main" style="width:100%;">
+<table id="main">
 	<tr>
 		<td width="50%" class="main">
 			${conn_url}
@@ -112,9 +113,9 @@ function aj_execute(type, url, formName){
 	</tr>
 </table>
 
-
+<hr />
 <h2>数据库修改：</h2>
-<div class="z_box2 alert alert-block">
+<div class="z_box2 alert alert-info">
 	<ul class="unstyled">
 	<c:if test="${table2Sub != '[]'}">
 		<li class="b"><strong>在数据库2新增表（来自数据库1，表数据不会被添加）：</strong></li>
@@ -122,7 +123,7 @@ function aj_execute(type, url, formName){
 		<li id="li_table2Sub${status.count}">“${table[0]}”
 		<form id="table2Sub${status.count}" action="modify">
 			<textarea name="sqlExec" style="display:none">${table[1]}</textarea>
-			<input type="button" class="btn btn-small btn-danger" value="执行" onclick="aj_execute('type', this.form.action, this.form.id)" />
+			<input type="button" class="btn btn-xs btn-danger" value="执行" onclick="aj_execute('type', this.form.action, this.form.id)" />
 		</form>
 		</li>
 		</c:forEach>
@@ -134,7 +135,7 @@ function aj_execute(type, url, formName){
 			<li id="li_table2Sup${status.count}">“${table}”
 			<form id="table2Sup${status.count}" action="modify">
 				<textarea name="sqlExec" style="display:none">drop table `${table}`</textarea>
-				<input type="button" class="btn btn-small btn-danger" value="执行" onclick="aj_execute('type', this.form.action, this.form.id)" />
+				<input type="button" class="btn btn-xs btn-danger" value="执行" onclick="aj_execute('type', this.form.action, this.form.id)" />
 			</form>
 			</li>
 		</c:forEach>
@@ -154,7 +155,7 @@ function aj_execute(type, url, formName){
 					<c:set var="delim" value=":"/> 
 					<c:set var="array" value="${fn:split(arrayvalue, delim)}"/>
 					<textarea name="sqlExec" style="display:none">alter table `${array[0]}` add `${array[1]}` ${array[2]} ${array[4]}</textarea>
-					<input type="button" class="btn btn-small btn-danger" value="执行" onclick="aj_execute('type', this.form.action, this.form.id)" />
+					<input type="button" class="btn btn-xs btn-danger" value="执行" onclick="aj_execute('type', this.form.action, this.form.id)" />
 				</form>
 				</li>
 		</c:forEach>
@@ -170,7 +171,7 @@ function aj_execute(type, url, formName){
 				<code>${array[0]}.${array[1]}</code> - <code>${column}</code>
 				<form id="table2ColumnSup${status.count}" action="modify">
 					<textarea name="sqlExec" style="display:none">ALTER TABLE  `${array[0]}` DROP `${array[1]}`</textarea>
-					<input type="button" class="btn btn-small btn-danger" value="执行" onclick="aj_execute('type', this.form.action, this.form.id)" />
+					<input type="button" class="btn btn-xs btn-danger" value="执行" onclick="aj_execute('type', this.form.action, this.form.id)" />
 				</form>
 			</li>
 		</c:forEach>
