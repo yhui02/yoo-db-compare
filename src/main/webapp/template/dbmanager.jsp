@@ -8,7 +8,7 @@
 <script type="text/javascript" src="js/jquery_plus.js"></script>
 <style>
 .container{width:98%;max-width: 98%}
-#main{font-size:12px;}
+#main{font-size:12px;width: 100%}
 #main .main{vertical-align: top;}
 .main{padding:12px;}
 .diff *{color:red !important;}

@@ -1,2 +1,12 @@
-#2011-09-10
-$mvn archetype:generate -DgroupId=com.yoo.dbcompare -DartifactId=dbcompare -Dpackage=com.yoo.dbcompare -Dversion=1.0-SNAPSHOT
+数据库比较工具（YOO-DB-COMPARE）
+=============================
+
+
+启动：`mvn tomcat7:run`  
+访问：<http://localhost:8800/>
+
+
+**功能截图**
+
+![首页](./doc/db-compare-01.png)
+![比较结果](./doc/db-compare-02.png)

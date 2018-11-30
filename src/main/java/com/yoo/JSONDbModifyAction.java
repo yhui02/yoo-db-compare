@@ -2,25 +2,30 @@ package com.yoo;
 
 import com.yoo.jdbc.DBConnection;
 
+/**
+ * @author yohann
+ */
 public class JSONDbModifyAction extends BaseSupport {
-	private String msg;
 
-	public String execute() throws Exception {
-		String conn2_url = request.getParameter("connUrl2");
-		String sqlExec = request.getParameter("sqlExec");
-		DBConnection dbconn = new DBConnection();
-		boolean r = dbconn.executeSql(conn2_url, sqlExec);
-		
-		setMsg("success");
+    private String msg;
 
-		return SUCCESS;
-	}
+    @Override
+    public String execute() throws Exception {
+        String conn2_url = request.getParameter("connUrl2");
+        String sqlExec = request.getParameter("sqlExec");
+        DBConnection dbconn = new DBConnection();
+        boolean r = dbconn.executeSql(conn2_url, sqlExec);
 
-	public String getMsg() {
-		return msg;
-	}
+        setMsg("success");
 
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
+        return SUCCESS;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
 }

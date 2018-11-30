@@ -17,10 +17,10 @@
 	<constant name="struts.configuration.xml.reload" value="true" />
 	
 	<!-- 国际化文件实时加载 -->
-	<constant name="struts.custom.i18n.reload" value="false"></constant>
+    <constant name="struts.custom.i18n.reload" value="false"/>
 
 	<!-- 指定STRUTS2支持后缀 -->
-	<constant name="struts.action.extension" value=",action,do,htm,json,xml"></constant>
+    <constant name="struts.action.extension" value=",action,do,htm,json,xml"/>
 	
 	<!-- 指定国际化文件 -->
 	<!--<constant name="struts.custom.i18n.resources" value=",mess,zelipe,global"></constant>-->
