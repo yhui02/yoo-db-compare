@@ -9,7 +9,7 @@
     <name>yoo-db-compare</name>
 
     <properties>
-        <struts2.version>2.3.1</struts2.version>
+        <struts2.version>2.3.33</struts2.version>
         <spring.version>4.3.16.RELEASE</spring.version>
         <mysql.version>5.1.2</mysql.version>
         <slf4j.version>1.6.1</slf4j.version>
@@ -39,13 +39,6 @@
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.1.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>2.5</version>
-            <scope>test</scope>
         </dependency>
 
         <dependency>
