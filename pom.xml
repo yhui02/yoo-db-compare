@@ -9,7 +9,7 @@
     <name>yoo-db-compare</name>
 
     <properties>
-        <struts2.version>2.3.33</struts2.version>
+        <struts2.version>2.3.36</struts2.version>
         <spring.version>4.3.16.RELEASE</spring.version>
         <mysql.version>5.1.2</mysql.version>
         <slf4j.version>1.6.1</slf4j.version>
